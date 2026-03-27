@@ -16,7 +16,7 @@ export default function Home() {
       {/* SIDEBAR -  */}
       <Card className="w-full md:w-80 h-screen sticky top-0">
         <CardHeader className="text-center">
-          <Avatar size="lg" className="mx-auto">
+          <Avatar className="w-32 h-32 mx-auto">
             <AvatarImage src={profile.photo} alt="Profile" />
             <AvatarFallback>PL</AvatarFallback>
           </Avatar>
@@ -33,7 +33,7 @@ export default function Home() {
         </CardContent>
 
         <CardFooter className="flex justify-center gap-2">
-          {/* Seus links de redes sociais aqui */}
+          {/* links de redes sociais  */}
         </CardFooter>
       </Card>
 
