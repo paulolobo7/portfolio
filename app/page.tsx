@@ -37,19 +37,19 @@ export default function Home() {
         </CardFooter>
       </Card>
 
-      {/* CONTEÚDO PRINCIPAL */}
-      <main className="flex-1 p-6">
-        {sections.map(  (section) => (
-          <section key={section.id} className="mb-8">
-            <h2 className="custom_title sticky top-0 border-b pb-2 bg-background">
-                {section.title}
-            </h2>
-            <p className="custom_description mt-4">
-              {section.title.toLowerCase()}
-            </p>
-          </section>
-        ))}
-      </main>
+       {/* CONTEÚDO PRINCIPAL */}
+       <main className="flex-1 p-6">
+         {sections.map(  (section) => (
+           <section key={section.id} id={section.id} className="mb-8">
+             <h2 className="custom_title sticky top-0 border-b pb-2 bg-background">
+                 {section.label}
+             </h2>
+             <p className="custom_description mt-4">
+               {section.content}
+             </p>
+           </section>
+         ))}
+       </main>
     </div>
   )
 }
