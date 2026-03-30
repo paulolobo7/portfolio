@@ -1,15 +1,10 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
 import {
   Card, CardContent, CardHeader,
   CardTitle, CardDescription, CardFooter
 } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
 import { profile, menuItems, sections, educacao, experiencias, projetos } from "@/app/constants/sections"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Car } from "lucide-react"
 import { Profile } from "@/components/profile"
+
 
 
 export default function Home() {

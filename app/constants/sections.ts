@@ -66,3 +66,5 @@ export const sections: Section[] = menuItems.map((item => ({
     content: "",
 })))
 
+export const socialMedias = [
+
