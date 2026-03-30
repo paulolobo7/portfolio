@@ -41,7 +41,7 @@ export interface Projects {
     id: number
     title: string
     description: string
-    technologies: string[]
+    skills: string[]
     link?: string 
     github?: string
 }

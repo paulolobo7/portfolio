@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss"
+import plugin from "tailwindcss/plugin"
 
 const config: Config = {
   content: [
@@ -34,7 +35,27 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(({ addComponents, theme }) => {
+      addComponents({
+        ".custom_container": {
+          padding: theme("spacing.8"),           // p-8 = 32px
+          width: theme("width.full"),            // w-full = 100%
+          maxWidth: theme("screens.xl"),         // max-w-xl = 1280px
+          margin: theme("margin.auto"),          // mx-auto (centraliza)
+        },
+        ".custom_title": {
+          fontSize: theme("fontSize.xl"),        // text-xl
+          fontWeight: theme("fontWeight.bold"),  // font-bold
+        },
+        ".custom_description": {
+          fontSize: theme("fontSize.base"),      // text-base
+          fontWeight: theme("fontWeight.normal"),// font-normal
+          color: theme("colors.muted.foreground"), // cor muted
+        },
+      });
+    }),
+  ],
 }
 
 export default config

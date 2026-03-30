@@ -6,50 +6,124 @@ import {
   CardTitle, CardDescription, CardFooter
 } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
-import { profile, menuItems, sections } from "@/app/constants/sections"
+import { profile, menuItems, sections, educacao, experiencias, projetos } from "@/app/constants/sections"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Car } from "lucide-react"
+import { Profile } from "@/components/profile"
+
 
 export default function Home() {
   return (
-    <div className="flex flex-col md:flex-row min-h-screen">
+    <div className="custom_container flex flex-col items-center justify-center gap-8 md:h-dvh md:flex-row md:items-start md:justify-start md:gap-0 md:p-0">
 
       {/* SIDEBAR -  */}
-      <Card className="w-full md:w-80 h-screen sticky top-0">
-        <CardHeader className="text-center">
-          <Avatar className="w-32 h-32 mx-auto">
-            <AvatarImage src={profile.photo} alt="Profile" />
-            <AvatarFallback>PL</AvatarFallback>
-          </Avatar>
-          <CardTitle>{profile.name}</CardTitle>
-          <CardDescription>{profile.role}</CardDescription>
-        </CardHeader>
-
-        <CardContent className="flex flex-col gap-2">
-          {menuItems.map((item) => (
-          <Link key={item.id} href={`#${item.id}`}>
-            <Button className="w-full">{item.label}</Button>
-          </Link>
-           ))}
-        </CardContent>
-
-        <CardFooter className="flex justify-center gap-2">
-          {/* links de redes sociais  */}
-        </CardFooter>
-      </Card>
+      <aside className="w-full md:h-dvh ">
+        <Card className="w-full h-full md:rounded-r-lg max-w-md flex flex-col justify-between gap-2 overflow-y-auto md:rounded-none">
+          <Profile />
+        </Card>
+      </aside>
 
        {/* CONTEÚDO PRINCIPAL */}
-       <main className="flex-1 p-6">
-         {sections.map(  (section) => (
-           <section key={section.id} id={section.id} className="mb-8">
-             <h2 className="custom_title sticky top-0 border-b pb-2 bg-background">
-                 {section.label}
-             </h2>
-             <p className="custom_description mt-4">
-               {section.content}
-             </p>
-           </section>
-         ))}
-       </main>
+      <main className="md:custom_container flex w-full flex-col md:h-dvh md:overflow-y-auto md:py-0">
+        <div className="relative flex w-full max-w-screen-sm flex-col gap-8 self-end py-4">
+        <section id="resumo" className="flex flex-col gap-4">
+         <h2 className="custom_title sticky top-0 border-b pb-2 bg-background">Resumo</h2>
+         <p>{profile.description}</p>
+        </section>
+
+
+        <section id="experiencias" className="flex flex-col gap-4">
+          <h2 className="custom_title sticky top-0 border-border border-b border-solid bg-background py-2">Experiências</h2>
+
+          {experiencias.map((exp) => (
+            <Card key={exp.id} className="p-4 mb-4">
+              <CardHeader>
+                <CardTitle>{exp.cargo}</CardTitle>
+              </CardHeader>
+              <CardContent>
+              <p>{exp.empresa}</p>
+              <p>{exp.date}</p>
+              <p>{exp.description}</p>
+
+              {exp.skills && (
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {exp.skills.map((skill, index) => (
+                    <span key={index} className="px-2 py-1 bg-gray-200 rounded">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              )}
+              </CardContent>
+            </Card>
+          ))}
+        </section>
+
+
+
+
+
+        <section id="projetos" className="flex flex-col gap-4">
+          <h2 className="custom_title sticky top-0 border-border border-b border-solid bg-background py-2">Projetos</h2>
+
+          {projetos.map((proj) => (
+            <Card key={proj.id} className="p-4 mb-4">
+              <CardHeader>
+              <CardTitle>{proj.title}</CardTitle>
+              </CardHeader>
+              <CardContent>
+              <p>{proj.description}</p>
+
+              <div className="mt-2 flex flex-wrap gap-2">
+                {proj.skills.map((skill, index) => (
+                  <span key={index} className="px-2 py-1 bg-gray-200 rounded">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+
+              {(proj.link || proj.github) && (
+                <div className="mt-4 flex gap-4">
+                  {proj.link && (
+                    <a href={proj.link} target="_blank" rel="noopener noreferrer">
+                      ver projeto
+                    </a>
+                  )}
+                  {proj.github && (
+                    <a href={proj.github} target="_blank" rel="noopener noreferrer">
+                      ver no GitHub
+                    </a>
+                  )}
+                </div>
+              )}
+              </CardContent>
+            </Card>
+          ))}
+        </section>
+
+
+
+
+
+
+        <section id="educacao" className="flex flex-col gap-4">
+          <h2 className="custom_title sticky top-0 border-border border-b border-solid bg-background py-2">Educação</h2>
+
+          {educacao.map((edu) => (
+            <Card key={edu.id} className="p-4 mb-4">
+              <CardHeader>
+                <CardTitle>{edu.curso}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>{edu.institution}</p>
+                <p>{edu.date}</p>
+                {edu.description && <p>{edu.description}</p>}
+              </CardContent>
+            </Card>
+          ))}
+        </section>
+        </div>
+      </main>
     </div>
   )
 }
