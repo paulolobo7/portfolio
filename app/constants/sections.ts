@@ -1,4 +1,4 @@
-import type { Profile, MenuItem, Section, Education, Experience, Projects } from "./types"
+import type { Profile, MenuItem, Section, Education, Experience, Projects,} from "./types"
 
 export const profile: Profile = {
     name: "Paulo Lobo",
@@ -66,5 +66,5 @@ export const sections: Section[] = menuItems.map((item => ({
     content: "",
 })))
 
-export const socialMedias = [
+
 
