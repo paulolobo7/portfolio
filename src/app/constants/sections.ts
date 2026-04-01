@@ -59,7 +59,6 @@ export const menuItems: MenuItem[] = [
 
 
 // Sections - reutiliza os menuItems para evitar duplicação
-// Isso é MUITO importante: uma única fonte de verdade!
 export const sections: Section[] = menuItems.map((item => ({
     id: item.id,
     label: item.label,

@@ -1,8 +1,8 @@
 import {
   Card, CardContent, CardHeader,
-  CardTitle, CardDescription, CardFooter
+  CardTitle 
 } from "@/components/ui/card"
-import { profile, menuItems, sections, educacao, experiencias, projetos } from "@/app/constants/sections"
+import { profile, educacao, experiencias, projetos } from "@/app/constants/sections"
 import { Profile } from "@/components/profile"
 
 

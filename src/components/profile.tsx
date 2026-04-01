@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { profile, menuItems } from "@/app/constants/sections"
 import Image from "next/image"
-import { Icon } from "@/components/icon"
 import { socialMedia } from "@/app/constants/social-media"
 import { ModeToggle } from "./mode-toggle"
 
