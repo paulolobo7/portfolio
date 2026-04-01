@@ -1,4 +1,3 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { CardTitle, CardDescription, CardHeader, CardContent, CardFooter } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
@@ -6,6 +5,7 @@ import { profile, menuItems } from "@/app/constants/sections"
 import Image from "next/image"
 import { Icon } from "@/components/icon"
 import { socialMedia } from "@/app/constants/social-media"
+import { ModeToggle } from "./mode-toggle"
 
 
 
@@ -18,7 +18,7 @@ export function Profile() {
   return (
     <>
       <div>
-        <CardHeader className="text-center">
+        <CardHeader className="text-center pb-4">
           <CardTitle className="flex flex-col gap-2 text-center">
             <Image
               src={profile.photo}
@@ -35,9 +35,9 @@ export function Profile() {
           </CardDescription>
         </CardHeader>
 
-        <CardContent className="flex flex-col gap-2">
+        <CardContent className="flex flex-col gap-2 mt-6 mx-auto">
           {menuItems.map((item) => (
-            <Button asChild key={item.id} className="w-full">
+            <Button asChild key={item.id} className="w-full bg-blue-600 hover:bg-blue-700 text-white ">
               <Link href={`#${item.id}`}>
                 {item.label}
               </Link>
@@ -45,17 +45,18 @@ export function Profile() {
           ))}
         </CardContent>
       </div>
-      <CardFooter className="flex flex-wrap justify-between gap-2">
-        <div className="flex gap-2">
-          {socialMedia.map(({ name, href, icon }) => (
+      <CardFooter className="flex flex-wrap justify-between items-center gap-2 pt-4">
+        <div className="flex gap-3">
+          {socialMedia.map(({ name, href, icon: IconComponent }) => (
             <Button asChild key={name} variant="outline" size="icon">
               <Link href={href} target="_blank" aria-label={name}>
-                <Icon name={icon as any} size={20} />
+                <IconComponent size={20} className="text-blue-600"/>
               </Link>
             </Button>
           ))}
-
         </div>
+
+            <ModeToggle />
       </CardFooter>
     </>
   )

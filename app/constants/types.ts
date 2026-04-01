@@ -1,4 +1,5 @@
 import type { DynamicIconImports } from "@/components/icon"
+import { IconType } from "react-icons"
 // Tipos definem a FORMA dos dados
 // É como um molde para cookies - todos seguem o mesmo formato
 
@@ -52,5 +53,5 @@ export interface Projects {
 export interface SocialMedia {
     name: string
     href: string
-    icon: string
+    icon: IconType
 }

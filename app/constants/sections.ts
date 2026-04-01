@@ -40,10 +40,10 @@ export const experiencias: Experience[] = [
 export const projetos: Projects[] = [
     {
         id: 1,
-        title: "Portfólio Pessoal",
-        description: "Desenvolvimento de um portfólio pessoal utilizando Next.js, React e Tailwind CSS para apresentar minhas habilidades, experiências e projetos de forma profissional e atraente.",
-        skills: ["Next.js", "React", "Tailwind CSS"],
-        link: "https://meu-portfolio.com",
+        title: "Projetos em Desenvolvimento....",
+        description: "",
+        skills: [""],
+        link: "",
         github: "",
     }
 ]

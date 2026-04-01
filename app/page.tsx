@@ -12,14 +12,14 @@ export default function Home() {
     <div className="custom_container flex flex-col items-center justify-center gap-8 md:h-dvh md:flex-row md:items-start md:justify-start md:gap-0 md:p-0">
 
       {/* SIDEBAR -  */}
-      <aside className="w-full md:h-dvh ">
-        <Card className="w-full h-full md:rounded-r-lg max-w-md flex flex-col justify-between gap-2 overflow-y-auto md:rounded-none">
+      <aside className="md:h-dvh md:rounded-r-lg">
+        <Card className="h-full max-w-md flex flex-col justify-between gap-2 overflow-y-auto md:rounded-none">
           <Profile />
         </Card>
       </aside>
 
        {/* CONTEÚDO PRINCIPAL */}
-      <main className="md:custom_container flex w-full flex-col md:h-dvh md:overflow-y-auto md:py-0">
+      <main className="md:custom_container flex w-full flex-col md:h-dvh md:overflow-y-auto md:py-0 scroll-smooth">
         <div className="relative flex w-full max-w-screen-sm flex-col gap-8 self-end py-4">
         <section id="resumo" className="flex flex-col gap-4">
          <h2 className="custom_title sticky top-0 border-b pb-2 bg-background">Resumo</h2>
@@ -43,7 +43,7 @@ export default function Home() {
               {exp.skills && (
                 <div className="mt-2 flex flex-wrap gap-2">
                   {exp.skills.map((skill, index) => (
-                    <span key={index} className="px-2 py-1 bg-gray-200 rounded">
+                    <span key={index} className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded">
                       {skill}
                     </span>
                   ))}
@@ -71,7 +71,7 @@ export default function Home() {
 
               <div className="mt-2 flex flex-wrap gap-2">
                 {proj.skills.map((skill, index) => (
-                  <span key={index} className="px-2 py-1 bg-gray-200 rounded">
+                  <span key={index} className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded">
                     {skill}
                   </span>
                 ))}
