@@ -1,11 +1,10 @@
-import type { Profile, MenuItem, Section, Education, Experience, Projects,} from "./types"
+import type { Profile, MenuItem, Education, Experience, Projects } from "./types"
 
 export const profile: Profile = {
     name: "Paulo Lobo",
-    role: "Desenvolvedor Frontend",
-    description: "Olá mundo, meu nome é Paulo, sou um desenvolvedor front-end junior com foco em Typescript e React.js.",
-    photo: "/paulo.png",
-    initials: "PL",
+    role: "Desenvolvedor Front-End Júnior",
+    description: "Desenvolvedor Front-End Júnior com foco em TypeScript e React, dedicado à criação de aplicações escaláveis, responsivas e acessíveis. Possuo experiência na construção de interfaces modernas e performáticas, sempre seguindo boas práticas de desenvolvimento e padrões de engenharia de software. Atualmente, sou graduando em Sistemas de Informação pelo Centro Universitário do Maranhão (Ceuma) e busco constantemente aprimorar minhas habilidades, com forte interesse em desenvolvimento de software e na evolução contínua como profissional.",
+    photo: "/paulolobo.png",
 }
 
 export const educacao: Education[] = [
@@ -19,11 +18,18 @@ export const educacao: Education[] = [
     
     {
         id: 2, 
-        institution: "Ceuma", 
+        institution: "Centro Universitário do Maranhão (CEUMA)", 
         curso: "Sistemas de Informação", 
-        date: "2026-Cursando", 
-        description: "Graduação em andamento, com foco em desenvolvimento de software, banco de dados e engenharia de software."
+        date: "2026-2030", 
+        description: "Graduação em andamento, com foco em desenvolvimento e engenharia de software."
     },
+    {
+        id: 3,
+        institution: "INCODE TECH SCHOOL",
+        curso: "Escola de Programação",
+        date: "2026-2027",
+        description: "Curso intensivo focado em programação, desenvolvimento web e tecnologias modernas do mercado."
+    }
 ]
 
 export const experiencias: Experience[] = [
@@ -40,11 +46,13 @@ export const experiencias: Experience[] = [
 export const projetos: Projects[] = [
     {
         id: 1,
-        title: "Projetos em Desenvolvimento....",
-        description: "",
-        skills: [""],
-        link: "",
-        github: "",
+        title: "Routines",
+        iframeUrl: "https://routines-six.vercel.app/",
+        description: "Routines é uma ferramenta para criar, organizar e acompanhar suas rotinas diárias de forma simples e eficiente, com o auxílio do método Pomodoro para otimizar a produtividade.",
+        skills: ["Typescript", "React.js", "Next.js", "Tailwind CSS"],
+        link: "https://routines-six.vercel.app",
+        github: "https://github.com/paulolobo7/routines",
+        img: "/routines.png"
     }
 ]
 
@@ -57,13 +65,6 @@ export const menuItems: MenuItem[] = [
 ]
 
 
-
-// Sections - reutiliza os menuItems para evitar duplicação
-export const sections: Section[] = menuItems.map((item => ({
-    id: item.id,
-    label: item.label,
-    content: "",
-})))
 
 
 

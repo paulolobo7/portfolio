@@ -1,16 +1,8 @@
 import { IconType } from "react-icons"
-// Tipos definem a FORMA dos dados
-// É como um molde para cookies - todos seguem o mesmo formato
 
 export interface MenuItem {
   id: string
   label: string
-}
-
-export interface Section extends MenuItem {
-  // Section herda id e label de MenuItem
-  // "extends" significa que Section tem tudo que MenuItem tem, MAIS o content
-  content: string
 }
 
 export interface Profile {
@@ -18,7 +10,6 @@ export interface Profile {
   role: string
   description: string
   photo: string
-  initials: string
 }
 
 export interface Education {
@@ -43,11 +34,11 @@ export interface Projects {
     title: string
     description: string
     skills: string[]
-    link?: string 
+    link?: string
     github?: string
+    iframeUrl?: string
+    img?: string
 }
-
-
 
 export interface SocialMedia {
     name: string

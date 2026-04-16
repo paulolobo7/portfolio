@@ -30,13 +30,13 @@ export function Profile() {
             <span className="text-xl">{profile.role}</span>
           </CardTitle>
           <CardDescription className="custom_description">
-            {profile.description}
+            Olá mundo, meu nome é Paulo, sou um desenvolvedor front-end junior com foco em Typescript e React.js.
           </CardDescription>
         </CardHeader>
 
         <CardContent className="flex flex-col gap-2 mt-6 mx-auto">
           {menuItems.map((item) => (
-            <Button asChild key={item.id} className="w-full bg-blue-600 hover:bg-blue-700 text-white ">
+            <Button asChild key={item.id} variant="default" className="w-full">
               <Link href={`#${item.id}`}>
                 {item.label}
               </Link>
@@ -49,7 +49,7 @@ export function Profile() {
           {socialMedia.map(({ name, href, icon: IconComponent }) => (
             <Button asChild key={name} variant="outline" size="icon">
               <Link href={href} target="_blank" aria-label={name}>
-                <IconComponent size={20} className="text-blue-600"/>
+                <IconComponent size={20} />
               </Link>
             </Button>
           ))}
