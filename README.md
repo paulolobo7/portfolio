@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🗂️ Portfólio — Paulo Lobo
 
-## Getting Started
+Meu portfólio pessoal desenvolvido com Next.js, apresentando minha trajetória, experiências, projetos e formação acadêmica. Os projetos podem ser visualizados diretamente na página, sem precisar sair do portfólio.
 
-First, run the development server:
+## ✨ Funcionalidades
+
+- **Visualização de projetos embutida** — abre o site do projeto em um modal com iframe
+- **Tema claro/escuro** — alternância automática baseada no sistema
+- **Layout responsivo** — sidebar + conteúdo no desktop, empilhado no mobile
+- **Navegação por âncoras** — botões no sidebar rolam suavemente até cada seção
+
+## 🚀 Tecnologias
+
+- [Next.js 16](https://nextjs.org/)
+- [React 19](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Radix UI](https://www.radix-ui.com/)
+- [Lucide React](https://lucide.dev/)
+- [next-themes](https://github.com/pacocoursey/next-themes)
+
+## 📦 Como rodar localmente
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Clone o repositório
+git clone https://github.com/paulolobo7/portfolio
+
+# Acesse a pasta
+cd portfolio
+
+# Instale as dependências
+pnpm install
+
+# Rode o servidor de desenvolvimento
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse [http://localhost:3000](http://localhost:3000) no navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Estrutura do projeto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/
+│   ├── constants/        # Dados do portfólio (perfil, projetos, experiências...)
+│   ├── providers/        # ThemeProvider
+│   ├── globals.css       # Estilos globais e classes utilitárias
+│   ├── layout.tsx        # Layout raiz com metadados
+│   └── page.tsx          # Página principal
+└── components/
+    ├── ui/               # Componentes base (shadcn/ui)
+    ├── profile.tsx       # Sidebar com foto, nome e navegação
+    ├── mode-toggle.tsx   # Botão de alternância de tema
+    └── icon.tsx          # Componente de ícone
+```
 
-## Learn More
+## 📬 Contato
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **GitHub:** [github.com/paulolobo7](https://github.com/paulolobo7)
+- **LinkedIn:** [linkedin.com/in/paulo-lobo-2b36382b2](https://www.linkedin.com/in/paulo-lobo-2b36382b2)
+- **Email:** paulorobertocabrallobo@gmail.com
