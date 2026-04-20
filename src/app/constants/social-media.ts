@@ -1,7 +1,8 @@
 import { SocialMedia } from "./types";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaWhatsapp} from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
 import { IconType } from "react-icons";
+
 
 export const socialMedia: SocialMedia[] = [
   {
@@ -19,4 +20,9 @@ export const socialMedia: SocialMedia[] = [
     href: "mailto:paulorobertocabrallobo@gmail.com",
     icon: HiMail as IconType
   },
+  {
+    name: "Whatsapp",
+    href: "https://wa.me/5598988267230",
+    icon: FaWhatsapp
+  }
 ]
