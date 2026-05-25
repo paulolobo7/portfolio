@@ -30,7 +30,7 @@ export function Profile() {
             <span className="text-xl">{profile.role}</span>
           </CardTitle>
           <CardDescription className="custom_description">
-            Olá mundo, meu nome é Paulo, sou um desenvolvedor front-end junior com foco em Typescript e React.js.
+            Olá mundo, meu nome é Paulo, sou um desenvolvedor fullstack junior com foco em Typescript e React.js no front-end e Node.js no back-end.
           </CardDescription>
         </CardHeader>
 
