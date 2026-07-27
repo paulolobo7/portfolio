@@ -13,15 +13,15 @@ export const Iframe = ({ title, iframeUrl }: Props) => {
     const [loading, setLoading] = useState(true)
 
     return (
-        <div className="relative w-full h-full">
+        <div className="relative h-full min-h-0 w-full overflow-hidden bg-background">
             {loading && (
-                <Skeleton className="absolute inset-0 z-10 rounded-lg" />
+                <Skeleton className="absolute inset-0 z-10" />
             )}
 
             <iframe
                 src={iframeUrl}
                 title={title}
-                className="absolute top-10 left-0 right-0 bottom-0 w-full h-[calc(100%-2.5rem)] rounded-lg"
+                className="h-full w-full border-0 bg-background"
                 loading="lazy"
                 onLoad={() => setLoading(false)}
             />

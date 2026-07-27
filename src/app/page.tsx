@@ -5,9 +5,13 @@ import {
 import { profile, educacao, experiencias, projetos } from "@/app/constants/sections"
 import { Profile } from "@/components/profile"
 import { Iframe } from "@/components/ui/iframe"
-import { Dialog, DialogContent, DialogTrigger, DialogClose } from "@/components/ui/dialog"
+import {
+  Dialog, DialogContent, DialogTrigger, DialogClose,
+  DialogDescription, DialogTitle
+} from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 import { XIcon } from "lucide-react"
+import Image from "next/image"
 
 
 export default function Home() {
@@ -78,9 +82,11 @@ export default function Home() {
                   {/* Imagem do projeto */}
                   {proj.img && (
                     <div className="w-full">
-                      <img
+                      <Image
                         src={proj.img}
                         alt={proj.title}
+                        width={640}
+                        height={360}
                         className="w-full rounded-lg"
                       />
                     </div>
@@ -97,21 +103,25 @@ export default function Home() {
                       {proj.iframeUrl && (
                         <DialogContent
                           showCloseButton={false}
-                          className="w-[calc(100vw-2rem)] h-[90vh] sm:w-[85vw] sm:max-w-[85vw] p-0 rounded-lg overflow-hidden"
+                          className="top-0 left-0 grid h-dvh w-screen max-w-none translate-x-0 translate-y-0 grid-rows-[auto_minmax(0,1fr)] gap-0 overflow-hidden rounded-none p-0 sm:top-1/2 sm:left-1/2 sm:h-[90dvh] sm:w-[85vw] sm:max-w-[85vw] sm:-translate-x-1/2 sm:-translate-y-1/2 sm:rounded-lg"
                         >
                           {/* Iframe ocupa o modal inteiro */}
-                          <div className="relative w-full h-full">
-                            <Iframe title={proj.title} iframeUrl={proj.iframeUrl} />
+                          <div className="flex min-h-10 items-center justify-between gap-3 border-b bg-background/90 px-4 py-2 backdrop-blur-md">
+                            <DialogTitle className="min-w-0 truncate text-sm font-medium">
+                              {proj.title}
+                            </DialogTitle>
+                            <DialogClose asChild>
+                              <Button variant="ghost" size="icon-sm">
+                                <XIcon className="h-4 w-4" />
+                              </Button>
+                            </DialogClose>
+                          </div>
+                          <DialogDescription className="sr-only">
+                            Visualização interativa do projeto {proj.title}.
+                          </DialogDescription>
 
-                            {/* Barra flutuante sobre o iframe com blur */}
-                            <div className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-2 backdrop-blur-md bg-background/60 border-b">
-                              <span className="text-sm font-medium">{proj.title}</span>
-                              <DialogClose asChild>
-                                <Button variant="ghost" size="icon-sm">
-                                  <XIcon className="h-4 w-4" />
-                                </Button>
-                              </DialogClose>
-                            </div>
+                          <div className="min-h-0 w-full">
+                            <Iframe title={proj.title} iframeUrl={proj.iframeUrl} />
                           </div>
                         </DialogContent>
                       )}

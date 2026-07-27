@@ -1,15 +1,12 @@
-import type { LucideProps } from "lucide-react"
-import dynamicIconImports from "lucide-react/dynamicIconImports"
-import dynamic from "next/dynamic"
+"use client"
 
-export type DynamicIconImports = keyof typeof dynamicIconImports
+import type { LucideProps } from "lucide-react"
+import { DynamicIcon, type IconName } from "lucide-react/dynamic"
 
 interface IconProps extends LucideProps {
-  name: DynamicIconImports
+  name: IconName
 }
 
-export const Icon = ({ name, ...props }: IconProps) => {
-    const LucideIcon = dynamic(dynamicIconImports[name])
-
-    return <LucideIcon {...props} />
-}
+export const Icon = ({ name, ...props }: IconProps) => (
+  <DynamicIcon name={name} {...props} />
+)

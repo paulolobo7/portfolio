@@ -19,13 +19,15 @@ export function Profile() {
       <div>
         <CardHeader className="text-center pb-4">
           <CardTitle className="flex flex-col gap-2 text-center">
-            <Image
-              src={profile.photo}
-              alt={profile.name}
-              width={100}
-              height={160}
-              className="h-40 w-40 rounded-full object-cover mx-auto my-4"
-            />
+            <span className="relative mx-auto my-4 h-40 w-40 overflow-hidden rounded-full">
+              <Image
+                src={profile.photo}
+                alt={profile.name}
+                fill
+                sizes="160px"
+                className="object-cover"
+              />
+            </span>
             <span className="text-2xl font-bold">{profile.name}</span>
             <span className="text-xl">{profile.role}</span>
           </CardTitle>
