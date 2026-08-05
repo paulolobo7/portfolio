@@ -19,17 +19,10 @@ export const educacao: Education[] = [
     {
         id: 2, 
         institution: "Centro Universitário do Maranhão (CEUMA)", 
-        curso: "Sistemas de Informação", 
-        date: "2026-2030", 
+        curso: "Análise e Desenvolvimento de Sistemas", 
+        date: "2026-2028", 
         description: "Graduação em andamento, com foco em desenvolvimento e engenharia de software."
     },
-    {
-        id: 3,
-        institution: "INCODE TECH SCHOOL",
-        curso: "Escola de Programação",
-        date: "2026-2027",
-        description: "Curso intensivo focado em programação, desenvolvimento web e tecnologias modernas do mercado."
-    }
 ]
 
 export const experiencias: Experience[] = [
@@ -37,7 +30,7 @@ export const experiencias: Experience[] = [
         id: 1,
         empresa: "Radio 92",
         cargo: "Estagiário - Desenvolvedor Fullstack",
-        date: "2026 - Presente",
+        date: "04/2026 - 07/2026",
         description: "Atualmente, atuo como estagiário de desenvolvimento fullstack na Rádio 92, onde sou responsável por criar e manter aplicações web que atendem às necessidades da empresa. Minha função envolve o desenvolvimento de interfaces responsivas e intuitivas utilizando React.js, bem como a implementação de funcionalidades no backend com Node.js. Essa experiência tem sido fundamental para meu crescimento profissional, permitindo-me aplicar meus conhecimentos em um ambiente real de trabalho, colaborar com uma equipe multidisciplinar e contribuir para projetos que impactam diretamente a audiência da rádio.",
         skills: ["Desenvolvimento Fullstack", "React.js", "TypeScript", "Node.js", "React Native", "PostgreSQL", "Docker", "Fastify"]
     },
@@ -47,7 +40,7 @@ export const experiencias: Experience[] = [
         id: 2,
         empresa: "IEMA-DIRETORIA", 
         cargo: "Estagiário - Suporte Técnico", 
-        date: "2025 - 2025", 
+        date: "08/2025 - 12/2025", 
         description: "Durante meu estágio no IEMA – Diretoria, iniciei minha trajetória na área de tecnologia atuando com suporte técnico, lidando com demandas reais em um ambiente profissional e colaborativo. Essa experiência foi essencial para o meu crescimento, permitindo-me desenvolver habilidades na resolução de problemas relacionados a computadores, sistemas e rede, além de aprimorar minha comunicação no atendimento aos usuários. Também tive a oportunidade de atuar no suporte em eventos de grande porte, garantindo o funcionamento adequado dos equipamentos e sistemas. Trabalhar nesse contexto contribuiu para fortalecer minha responsabilidade, organização e capacidade de lidar com diferentes situações do dia a dia, consolidando minha base para atuação na área.", 
         skills: ["Suporte Técnico", "Manutenção de Hardware", "Gestão de Redes", "Atendimento ao Cliente"]
     }
