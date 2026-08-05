@@ -16,11 +16,11 @@ import Image from "next/image"
 
 export default function Home() {
   return (
-    <div className="custom_container flex flex-col items-center justify-center gap-8 md:h-dvh md:flex-row md:items-start md:justify-start md:gap-0 md:p-0">
+    <div className="custom_container flex min-h-dvh flex-col items-center justify-center gap-8 md:h-dvh md:flex-row md:items-start md:justify-start md:gap-0 md:p-0">
 
       {/* SIDEBAR -  */}
-      <aside className="md:h-dvh md:rounded-r-lg">
-        <Card className="h-full max-w-md flex flex-col justify-between gap-2 overflow-y-auto md:rounded-none">
+      <aside className="w-full md:h-dvh md:w-auto md:rounded-r-lg">
+        <Card className="h-full w-full max-w-md flex flex-col justify-between gap-2 overflow-y-auto md:rounded-none">
           <Profile />
         </Card>
       </aside>

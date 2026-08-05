@@ -4,7 +4,6 @@ import Link from "next/link"
 import { profile, menuItems } from "@/app/constants/sections"
 import Image from "next/image"
 import { socialMedia } from "@/app/constants/social-media"
-import { ModeToggle } from "./mode-toggle"
 
 
 
@@ -57,7 +56,6 @@ export function Profile() {
           ))}
         </div>
 
-            <ModeToggle />
       </CardFooter>
     </>
   )
