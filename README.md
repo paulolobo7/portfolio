@@ -5,7 +5,6 @@ Meu portfólio pessoal desenvolvido com Next.js, apresentando minha trajetória,
 ## ✨ Funcionalidades
 
 - **Visualização de projetos embutida** — abre o site do projeto em um modal com iframe
-- **Tema claro/escuro** — alternância automática baseada no sistema
 - **Layout responsivo** — sidebar + conteúdo no desktop, empilhado no mobile
 - **Navegação por âncoras** — botões no sidebar rolam suavemente até cada seção
 
