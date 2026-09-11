@@ -45,3 +45,14 @@ export interface SocialMedia {
     href: string
     icon: IconType
 }
+
+export interface Certification {
+    id: number
+    name: string
+    institution: string
+    date: string
+    link?: string
+    img?: string
+    hours?: string
+    description?: string
+}

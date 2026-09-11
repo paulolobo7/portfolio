@@ -1,4 +1,4 @@
-import type { Profile, MenuItem, Education, Experience, Projects } from "./types"
+import type { Profile, MenuItem, Education, Experience, Projects, Certification } from "./types"
 
 export const profile: Profile = {
     name: "Paulo Lobo",
@@ -65,9 +65,42 @@ export const menuItems: MenuItem[] = [
     { id: "resumo", label: "Resumo" },
     { id: "experiencias", label: "Experiências" },
     { id: "projetos", label: "Projetos" },
-    { id: "educacao", label: "Educação" },
+    { id: "certificados", label: "Certificados" },
+    { id: "educacao", label: "Educação" }
 ]
 
+export const certificados: Certification[] = [
+    {
+        id: 1,
+        name: "Incode Tech School - Módulo Formação",
+        institution: "Incode Tech School",
+        date: "07/2026",
+        hours: "48h",
+        img: "/certifications/incode.png",
+        link: "/certifications/incode.png",
+        description: "Módulo de formação com carga horária de 48 horas envolvendo Python, Git, GitHub, Figma, HTML5, CSS3 e JavaScript."
+    },
+    {
+        id: 2,
+        name: "Bootcamp StackUp",
+        institution: "CEUMA • Oxygeni Hub • TechX",
+        date: "2026",
+        hours: "20h",
+        img: "/certifications/bootcamp-01.png",
+        link: "/certifications/bootcamp-01.png",
+        description: "Imersão prática com foco em desenvolvimento Front-end e Back-end, além da realização de um projeto final."
+    },
+    {
+        id: 3,
+        name: "Aula Magna - Trilhas 2026",
+        institution: "SECTI • FAPEMA • Inova Maranhão",
+        date: "09/2026",
+        hours: "4h",
+        img: "/certifications/trilhas-01.png",
+        link: "/certifications/trilhas-01.png",
+        description: "Participação na Aula Magna do Programa Trilhas 2026 promovido pela Secretaria de Estado da Ciência, Tecnologia e Inovação."
+    }
+]
 
 
 

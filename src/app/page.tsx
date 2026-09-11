@@ -2,7 +2,7 @@ import {
   Card, CardContent, CardHeader,
   CardTitle, CardFooter
 } from "@/components/ui/card"
-import { profile, educacao, experiencias, projetos } from "@/app/constants/sections"
+import { profile, educacao, experiencias, projetos, certificados } from "@/app/constants/sections"
 import { Profile } from "@/components/profile"
 import { Iframe } from "@/components/ui/iframe"
 import {
@@ -10,6 +10,7 @@ import {
   DialogDescription, DialogTitle
 } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
+import { CertificatesCarousel } from "@/components/certificates-carousel"
 import { XIcon } from "lucide-react"
 import Image from "next/image"
 
@@ -181,6 +182,13 @@ export default function Home() {
                 </section>
               </Card>
             ))}
+          </section>
+
+          <section id="certificados" className="flex flex-col gap-4">
+            <h2 className="custom_title sticky top-0">
+              Certificados
+            </h2>
+            <CertificatesCarousel items={certificados} />
           </section>
 
           <section id="educacao" className="flex flex-col gap-4">
