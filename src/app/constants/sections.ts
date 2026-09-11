@@ -31,7 +31,7 @@ export const experiencias: Experience[] = [
         empresa: "Radio 92",
         cargo: "Estagiário - Desenvolvedor Fullstack",
         date: "04/2026 - 07/2026",
-        description: "Atualmente, atuo como estagiário de desenvolvimento fullstack na Rádio 92, onde sou responsável por criar e manter aplicações web que atendem às necessidades da empresa. Minha função envolve o desenvolvimento de interfaces responsivas e intuitivas utilizando React.js, bem como a implementação de funcionalidades no backend com Node.js. Essa experiência tem sido fundamental para meu crescimento profissional, permitindo-me aplicar meus conhecimentos em um ambiente real de trabalho, colaborar com uma equipe multidisciplinar e contribuir para projetos que impactam diretamente a audiência da rádio.",
+        description: "Atuei como estagiário de desenvolvimento fullstack na Rádio 92, onde fui responsável por criar e manter aplicações web que atendem às necessidades da empresa. Minha função envolvia o desenvolvimento de interfaces responsivas e intuitivas utilizando React.js, bem como a implementação de funcionalidades no backend com Node.js. Essa experiência foi fundamental para meu crescimento profissional, permitindo-me aplicar meus conhecimentos em um ambiente real de trabalho, colaborar com uma equipe multidisciplinar e contribuir para projetos que impactam diretamente a audiência da rádio.",
         skills: ["Desenvolvimento Fullstack", "React.js", "TypeScript", "Node.js", "React Native", "PostgreSQL", "Docker", "Fastify"]
     },
     
