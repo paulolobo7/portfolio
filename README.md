@@ -59,3 +59,10 @@ src/
 - **GitHub:** [github.com/paulolobo7](https://github.com/paulolobo7)
 - **LinkedIn:** [linkedin.com/in/paulo-lobo-2b36382b2](https://www.linkedin.com/in/paulo-lobo-2b36382b2)
 - **Email:** paulorobertocabrallobo@gmail.com
+
+
+## Spoiler
+
+![Spoiler 01](./public/spoiler01.png)
+
+![Spoiler 02](./public/spoiler02.png)
